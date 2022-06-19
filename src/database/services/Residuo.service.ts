@@ -3,7 +3,9 @@ import { IResiduoService } from "../../interfaces/services/IResiduoService";
 import Residuo from "../models/Residuo";
 
 class ResiduoService implements IResiduoService {
-  async store(data: Pick<IResiduo, "name" | "collected">): Promise<IResiduo> {
+  async store(
+    data: Pick<IResiduo, "name" | "address" | "collected">
+  ): Promise<IResiduo> {
     const residuo = await Residuo.create({ ...data });
 
     return residuo;

@@ -3,5 +3,7 @@ export interface IResiduo {
 
   name: string;
 
+  address: string;
+
   collected: boolean;
 }

@@ -6,5 +6,7 @@ export interface IResiduoService {
   getAll(): Promise<IResiduo[]>;
   update(id: number, data: IResiduo): Promise<IResiduo>;
   destroy(id: number): Promise<void>;
-  store(data: Pick<IResiduo, "name" | "collected">): Promise<IResiduo>;
+  store(
+    data: Pick<IResiduo, "name" | "address" | "collected">
+  ): Promise<IResiduo>;
 }

@@ -7,6 +7,8 @@ class Residuo extends Model<IResiduo> {
 
   declare name: string;
 
+  declare address: string;
+
   declare collected: boolean;
 }
 
@@ -19,6 +21,10 @@ Residuo.init(
       primaryKey: true,
     },
     name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    address: {
       type: DataTypes.STRING,
       allowNull: false,
     },
